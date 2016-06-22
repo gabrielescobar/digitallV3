@@ -19,11 +19,11 @@ Author URI : http://www.markups.io/
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #ec1e29;
+  color: #fff;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #ec1e29;
+  color: #fff;
 }
 .search-area input[type="text"]:focus:hover {
   border-bottom: 1px solid #ec1e29;  
@@ -45,7 +45,7 @@ Author URI : http://www.markups.io/
   background-color: #ec1e29;
 }
 .single-wc-content:hover .wc-tittle{
-  border-bottom: 2px solid #ec1e29;  
+  border-bottom: 2px solid #ec1e29;
 }
 .about-left {
   background-color: #ec1e29;  

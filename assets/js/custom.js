@@ -95,14 +95,14 @@ jQuery(function($){
 	/* ----------------------------------------------------------- */
 
 	$('.client-table').slick({
-	  dots: false,
+	  dots: true,
 	  infinite: true,
-	  arrows:false, 
+	  arrows:true,
 	  speed: 300,
 	  autoplay: true,     
-	  slidesToShow: 6,
+	  slidesToShow: 10,
 	  slidesToScroll: 6,
-	  responsive: [
+	  responsive: [  
 	    {
 	      breakpoint: 1024,
 	      settings: {
