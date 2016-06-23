@@ -9,8 +9,10 @@ angular.module('digitall.controllers-contact',[])
         $scope.resultMessage;
         $scope.formData; //formData is an object holding the name, email, subject, and message
         $scope.submitButtonDisabled = false;
+
         $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
         $scope.submit = function(contactform) {
+         
             //alert("enviado");
             $scope.submitted = true;
             $scope.submitButtonDisabled = true;

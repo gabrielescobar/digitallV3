@@ -72,9 +72,33 @@ img{
  border:none;
 }
 
+.grayscale{
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);  /* For Webkit browsers */
+	filter: gray;  /* For IE 6 - 9 */
+	-webkit-transition: all .6s ease;  /* Transition for Webkit browsers */
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+}
 
+.grayscale:hover {
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+	filter: none;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
 
+}
 
+.row-centered {
+	text-align:center;
+}
+.col-centered {
+	display:inline-block;
+	float:none;
+	/* reset the text-align */
+	text-align:left;
+	/* inline-block space fix */
+	margin-right:-4px;
+}
 /* Preloader */
 
 #preloader {
@@ -181,11 +205,12 @@ img{
 	display: inline;
 	width: 100%;
 }
-.header-inner{	
+.header-inner{
 	display: inline;
 	position: relative;
 	float: left;	
 	width: 100%;
+	background-color: black;
 }
 .header-inner> video{
 	width: 100%;
@@ -270,10 +295,14 @@ img{
 /* MENU */
 /*--------------------*/
 
+.img-clients{
+	width: 90px!important;
+}
 #menu-area{
 	float: left;
 	display: inline;
 	width: 100%;
+	height: 100px;
 }
 .main-navbar {
 	/*background: #fff none repeat scroll 0 0;
@@ -297,7 +326,7 @@ img{
 }
 .logo {
 	height: 100px;  
-	width: 185px;
+	width: 40%;
 	margin-right: 45px;
 	margin-top: -1px;
 	padding: 0;
@@ -430,7 +459,7 @@ img{
 /*--------------------*/
 
 #about{
-	background-image: url("assets/images/bg/imaginacion.jpg");
+	background-image: url("assets/images/bg/imaginacion_2.jpg");
 	padding: 70px 0;
 	float: left;
 	display: inline;
@@ -452,7 +481,7 @@ img{
 	width: 100%;
 }
 .tittle {
-	color: #3a3a3a;
+	color: #fff;
 	font-size: 40px;
 	margin-bottom: 0;
 	padding-bottom: 18px;
@@ -513,12 +542,13 @@ img{
 	transition: all 0.5s;
 }
 .single-wc-content .wc-tittle{
-	color: #343333;
+	color: white;
 	text-transform: uppercase;
 	font-size: 18px;
 	border-bottom: 1px solid #bbbbbb;
 	margin-top: 32px;
-	padding-bottom: 17px;	
+	padding-bottom: 17px;
+	text-shadow: -0.5px 0 #ec1e29, 0 0.5px #ec1e29, 0.5px 0 #ec1e29, 0 -0.5px #ec1e29;
 }
 .single-wc-content p {
 	color: #343333;
@@ -702,6 +732,7 @@ img{
 	width: 100%;
 }
 .call-to-content {
+
 	display: inline;
 	float: left;
 	padding: 60px 0;
@@ -880,7 +911,7 @@ img{
 /*--------------------*/
 
 #service{
-	background-image: url("assets/images/bg/iStock.jpg");
+	background-image: url("assets/images/bg/iStock_2.jpg");
 	padding: 70px 0;
 	float: left;
 	display: inline;
@@ -953,7 +984,7 @@ img{
 	color: white;
 }
 p {
-	color: #343333;
+	color: #fff;
 }
 .single-service:hover p{
 	color: #ec1e29;
@@ -2457,9 +2488,26 @@ p {
 	  padding: 15px 18px;
 	}
 	.main-nav li {
-	  display: block;
-	  float: left;
-	  width: 100%;
+		background-color: white;
+		display: block;
+		float: left;
+		width: 100%;
+		z-index: 100;
+	}
+	.navbar-default .navbar-nav > .active > a:active {
+		background-color: #ec1e29 !important;
+		color: white;
+	}
+	.navbar-default .navbar-nav > li > a:hover{
+		background-color: #ec1e29 !important;
+		color: white;
+	}
+	.navbar-default .navbar-nav > li > a{
+		color: #ec1e29;
+	}
+	.main-nav li:active a {
+		background-color: #ec1e29;
+		color: white;
 	}
 	.main-nav li a {
 	  display: block; 
@@ -2479,9 +2527,12 @@ p {
 	  text-align: center;
 	  width: 100%;
 	}
+	.logo {
+		margin-left: 30px;
+	}
 	.navbar-default .navbar-toggle {
 	  border-color: #ddd;
-	  margin-right: 78px;
+	  margin-right: 30px;
 	  margin-top: 32px;
 	  border-radius: 0;
 	}
@@ -2747,7 +2798,7 @@ p {
 
 @media(max-width:360px ){
 	.header-inner > video {
-	  height: 250px;
+	  height: 100%;
 	  width: 100%;
 	}
 	.header-content {

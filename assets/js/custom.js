@@ -115,15 +115,15 @@ jQuery(function($){
 	    {
 	      breakpoint: 600,
 	      settings: {
-	        slidesToShow: 2,
-	        slidesToScroll: 2
+			  slidesToShow: 3,
+			  slidesToScroll: 3,
 	      }
 	    },
 	    {
 	      breakpoint: 480,
 	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1
+			  slidesToShow: 3,
+			  slidesToScroll: 3,
 	      }
 	    }
 	    // You can unslick at a given breakpoint now by adding:
@@ -225,9 +225,16 @@ jQuery(function($){
 	/*  10. MOBILE MENU CLOSE 
 	/* ----------------------------------------------------------- */ 
 
-	/*jQuery('.navbar-nav').on('click', 'li a', function() {
-	  $('.in').collapse('hide');
-	});*/
+	jQuery('.navbar-nav').on('click', 'li a', function() {
+		if ($(window).width() <= 767){
+			//alert($(window).width());
+			//$('.in').collapse('hide');
+			document.getElementById("navbar").className =
+				document.getElementById("navbar").className.replace(/\in\b/,'');
+		}
+	  //$('.in').collapse('hide');
+
+	});
 
 	/* ----------------------------------------------------------- */
 	/*  11. PRELOADER 
