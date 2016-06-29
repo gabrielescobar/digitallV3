@@ -232,7 +232,7 @@ img{
 	text-align: center;
 }
 .header-content h2 {
-	font-size: 80px;
+	font-size: 40px;
 	font-weight: bold;
 	text-transform: uppercase;
 	line-height: 80px;
@@ -460,7 +460,7 @@ img{
 
 #about{
 	background-image: url("assets/images/bg/imaginacion_2.jpg");
-	padding: 70px 0;
+	/*padding: 70px 0;*/
 	float: left;
 	display: inline;
 	width: 100%;
@@ -735,7 +735,7 @@ img{
 
 	display: inline;
 	float: left;
-	padding: 60px 0;
+	padding: 3% 0;
 	text-align: center;
 	width: 100%;
 }
@@ -2648,6 +2648,11 @@ p {
 }
 
 @media(max-width:480px ){
+
+	.no-show{
+		display: none;
+	}
+
 	.header-content {
 	  padding: 20px;
 	}
@@ -2805,7 +2810,7 @@ p {
 	  padding: 30px;
 	}
 	.header-content h2 {
-	  font-size: 20px;
+	  font-size: 15px;
 	  line-height: 18px;
 	}
 	.header-content h2 span {
