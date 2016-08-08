@@ -25,7 +25,6 @@ angular
         }
 
         $translateProvider.preferredLanguage('es');
-
     })
     .run(function($rootScope) {
         $rootScope.actualLanguage = "es";
